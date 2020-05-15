@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background:rgba(0, 0, 0, .5);
+    justify-content: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    
+}
+
+.game-title{
+align-content: center;
+text-align: center;
+color: brown;
+font-family: 'Press Start 2P', cursive;
+font-size: 300%;
+}
+.game-info{
+    position: relative;
+    font-family: 'Creepster', cursive;
+    size: 10px;
+}
+.overlay-text{
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0em;
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
+    z-index: 100;
+    size: 10em;
+    color: #ff6d11;
+    font-family: 'Creepster', cursive;
+}
+.overlay-text-small{
+    font-size: .3em;
+
+}
+.overlay-text.visible{
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 300ms forwards ;
+}
+@keyframes overlay-grow{
+    from{
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to{
+        background-color: rgba(0, 0, 0, .9 );
+        font-size: 10em;
+    }
+}
+.game-info{
+    font: sans-serif;
+     font-size: 300%;
+    color: tomato;
+}
+.game-info-container{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+.game-container{
+display: grid;
+grid-template-columns: repeat(4,auto);
+grid-gap: 10px;
+justify-content: center;
+perspective: 500px;
+}
+.card {
+    position: relative;
+    height: 175px;
+    width: 125px;
+  }
+  
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    transition: transform 500ms ease-in-out;
+  }
+.card .card-back {
+    transform: rotateY(0deg);
+  }
+  
+  .card .card-front {
+    transform: rotateY(-180deg)
+  }
+.poker{
+    height: 175px;
+    width: 200px;
+    justify-content: center;
+    position: absolute;
+}
+.card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border-width: 1px;
+    color:chocolate;
+    border-style: solid;
+    background-color: black;
+    border-color: #FF6D00;
+}
+
+    .card-back {
+        background-color: black;
+        border-color: #FF6D00;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .card-front {
+        position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border-width: 1px;
+    color:chocolate;
+    border-style: solid;
+    background-color: black;
+    border-color: #FF6D00;
+    transform: rotateY(180deg);
+      }
+      
+      .card-value {
+        transition: transform 100ms ease-in-out;
+        transform: scale(.9);
+        width: 100%;
+        height: 100%;
+      }
+      
+      .card-front:hover .card-value {
+        transform: scale(1);
+      }
+      
+      .card.visible .card-back {
+        transform: rotateY(-180deg);
+      }
+      
+      .card.visible .card-front {
+        transform: rotateY(0)
+      }
+      
+
+.card.visible:hover .card-front{
+    transform: rotateY(0deg);
+}
+.spade-image{
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    transition: width 100ms ease-in-out,height 100ms ease-in-out;
+}
+.card-back:hover .spade-image{
+    width: 52px;
+    height: 52px;
+
+}
+.spade-top-left{
+    top: 0;
+    left: 0;
+   transform: rotate(135deg);
+}
+.spade-top-right{
+    top: 0;
+    right: 0;
+    transform: rotate(-90deg);
+}
+.spade-bottom-left{
+    bottom: 0;
+    left: 0;
+transform: rotate(90deg);
+}
+
+.spade-bottom-right{
+    right: 0;
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.card-front:hover .poker{
+    transform: translateY(-180deg);
+}
+.card:hover{
+    outline: magenta;
+}
+.card-face:hover .spade-image{
+    height: 51px;
+    width: 51px;
+}
+
