@@ -12,7 +12,7 @@
     <script src="script.js" async></script>
 <body>
    
-    <h1 class="game-title">Mix or match</h1>
+    <h1 class="game-title">Memory  Match</h1>
     <div class="overlay-text visible">Click to start</div>
     <div id="game-over-text" class="overlay-text">GAME OVER 
         <span class="overlay-text-small">Click to restart</span>
@@ -24,7 +24,7 @@
     <div class="game-container">
         <div class="game-info-container">
             <div class="game-info">
-                Time: <span id="time-remaining">100</span>
+                Time: <span id="time-remaining">60</span>
             </div>
                 <div class="game-info">
                     Flips: <span id="flips">0</span>
@@ -32,195 +32,131 @@
         </div>
                 
         <div class="card">
-            <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+            <div class="card-back card-face">               
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/cigar_skull.jpg">  
+                <img class="card-value" id="red">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/cigar_skull.jpg">  
+                <img class="card-value" id="red">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/four_dum_sybmbols.jpg">  
+                <img class="card-value" id="green">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/four_dum_sybmbols.jpg">  
+                <img class="card-value" id="green">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/four_a_.jpg">  
+                <img class="card-value" id="blue">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/four_a_.jpg">  
+                <img class="card-value" id="blue">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/four_sybmbols.jpg">  
+                <img class="card-value" id="orange">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/four_card.jpg">  
+                <img class="card-value" id="orange">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/four_card.jpg">  
+                <img class="card-value" id="yellow">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/four_queens.jpg">  
+                <img class="card-value" id="yellow">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/four_queens.jpg">  
+                <img class="card-value" id="pink">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/skull_hat.jpg">  
+                <img class="card-value" id="pink">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/skull_hat.jpg">  
+                <img class="card-value" id="grey">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/thu der.jpg">  
+                <img class="card-value" id="grey">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/thu der.jpg">  
+                <img class="card-value" id="magenta">  
               </div>
         </div>
         <div class="card">
             <div class="card-back card-face">
-                <img class="spade-image spade-top-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-top-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-left" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="spade-image spade-bottom-right" src="images/—Pngtree—cartoon love red love heart-shaped_3854950.png">
-                <img class="poker" src="images/—Pngtree—vector playing cards_2189662.png">
+                <img class="poker" src="images/vector-abstract-polygon-background-triangle-pattern-multi-color-colorful-rainbow-spectrum-irregular-90247917.jpg">
             </div>
             <div class="card-front card-face">
-                <img class="card-value" src="card images/four_sybmbols.jpg">  
+                <img class="card-value" id="magenta">  
               </div>
         </div>
 
