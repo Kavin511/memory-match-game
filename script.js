@@ -6,15 +6,27 @@ class MixOrMatch {
         this.timer = document.getElementById('time-remaining')
         this.ticker = document.getElementById('flips');
     }
-
     startGame() {
         this.totalClicks = 0;
         this.timeRemaining = this.totalTime;
         this.cardToCheck = null;
         this.matchedCards = [];
         this.busy = true;
+        setTimeout(()=>{
+            this.cardsArray.forEach(card=>{
+                card.classList.add('visible');
+                
+            });
+        },100);
+        setTimeout(()=>{
+            this.cardsArray.forEach(card=>{
+                card.classList.add('visible');
+                card.classList.remove('visible');
+            });
+        },4000);
+      
+        
         setTimeout(() => {
-            
             this.shuffleCards(this.cardsArray);
             this.countdown = this.startCountdown();
             this.busy = false;
@@ -26,19 +38,19 @@ class MixOrMatch {
     startCountdown() {
         return setInterval(() => {
             this.timeRemaining--;
+            if(this.timeRemaining<=100)
             this.timer.innerText = this.timeRemaining;
             if(this.timeRemaining === 0)
                 this.gameOver();
         }, 1000);
     }
+
     gameOver() {
         clearInterval(this.countdown);
-       
         document.getElementById('game-over-text').classList.add('visible');
     }
     victory() {
         clearInterval(this.countdown);
-        
         document.getElementById('victory-text').classList.add('visible');
     }
     hideCards() {
@@ -48,7 +60,8 @@ class MixOrMatch {
         });
     }
     flipCard(card) {
-        if(this.canFlipCard(card)) {          
+        if(this.canFlipCard(card)) {
+            
             this.totalClicks++;
             this.ticker.innerText = this.totalClicks;
             card.classList.add('visible');
@@ -72,10 +85,12 @@ class MixOrMatch {
         this.matchedCards.push(card1);
         this.matchedCards.push(card2);
         card1.classList.add('matched');
-        card2.classList.add('matched');   
+        card2.classList.add('matched');
+       
         if(this.matchedCards.length === this.cardsArray.length)
             this.victory();
     }
+
     cardMismatch(card1, card2) {
         this.busy = true;
         setTimeout(() => {
@@ -94,7 +109,7 @@ class MixOrMatch {
         });
     }
     getCardType(card) {
-        return card.getElementsByClassName('card-value')[0].src;
+        return card.getElementsByClassName('card-value')[0].id;
     }
     canFlipCard(card) {
         return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
@@ -102,19 +117,23 @@ class MixOrMatch {
 }
 
 if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready)
+    document.addEventListener('DOMContentLoaded', ready);
 } else {
-    ready()
+    ready();
 }
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(100, cards);
-
+    let game = new MixOrMatch(30, cards);
+    
+    
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible');
+           let memory= document.getElementById('mem');
+           
+            
             game.startGame();
         });
     });
